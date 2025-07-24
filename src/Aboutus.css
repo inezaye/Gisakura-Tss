@@ -1,0 +1,115 @@
+/* src/components/Aboutus.css 
+#section2 {
+  margin-top: 100px;
+}*/
+
+.about-section {
+  background: linear-gradient(135deg, #020c31, #081743);
+  padding: 20px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+}
+
+.about-content {
+  max-width: 1200px;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+}
+
+.section-title {
+
+  font-size: 2.5rem;
+  margin-top: 100px;
+  color: #ffffff;
+}
+
+.section2 about-description {
+  font-size: 1.2rem;
+  color: #ddd;
+  margin-bottom: 0px;
+
+}
+
+.cards-container {
+  display:inline flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.info-card {
+  background: #ffffff;
+  color: #081743;
+  border-radius: 25px;
+  padding: 25px 20px;
+  max-width: 320px;
+  width: 100%;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.info-card:hover {
+  transform: translateY(-5px);
+}
+
+.info-card h3 {
+  color: #8a2be2;
+  margin-bottom: 10px;
+}
+
+.info-card hr {
+  width: 50px;
+  border: 2px solid #8a2be2;
+  margin: 5px auto;
+  border-radius: 2px;
+}
+
+.info-card h5 {
+  color: #005f99;
+  margin-top: 10px;
+}
+
+.info-card p {
+  color: #007bb5;
+  font-size: 0.95rem;
+}
+
+.circle {
+  width: 100px;
+  height: 100px;
+  background: #f0f8ff;
+  border: 8px solid #052064;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+  font-weight: bold;
+  margin: 15px auto;
+  color: #052064;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-description {
+    font-size: 1rem;
+  }
+
+  .cards-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .info-card {
+    max-width: 90%;
+  }
+
+  .circle {
+    width: 80px;
+    height: 80px;
+    font-size: 28px;
+  }
+}

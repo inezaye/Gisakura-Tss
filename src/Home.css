@@ -1,0 +1,59 @@
+.home-section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.bg-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: opacity 3s ease-in-out;
+  z-index: 0;
+}
+
+.bg-image.active {
+  opacity: 1;
+}
+
+.school-overlay {
+  position: relative;
+  z-index: 1;
+  background-color: rgba(3, 17, 74, 0.457);
+  padding: 40px 20px;
+  border-radius: 20px;
+  max-width: 800px;
+  text-align: center;
+}
+
+.tool {
+  margin: 10px 0;
+}
+
+.tool hr {
+  width: 60px;
+  border: 2px solid white;
+  margin: 10px auto;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .school-overlay {
+    padding: 20px;
+  }
+
+  .tool hr {
+    width: 40px;
+  }
+}

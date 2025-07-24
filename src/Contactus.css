@@ -1,0 +1,51 @@
+.section4 {
+  padding: 40px;
+  background-color: rgba(3, 9, 45, 0.648);
+  text-align: center;
+  color: whitesmoke;
+}
+
+.contact-container {
+  max-width: 800px;
+  margin: auto;
+}
+
+.contact-info p {
+  margin: 8px 0;
+  color: whitesmoke;
+  font-size: 1rem;
+}
+
+.contact-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.contact-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.instagram { background-color: #E1306C; }
+.instagram:hover { background-color: #C42C63; }
+
+.email { background-color: #2ecc71; }
+.email:hover { background-color: #27ae60; }
+
+.whatsapp { background-color: #25D366; }
+.whatsapp:hover { background-color: #1DA851; }
+
+.location { background-color: #3498db; }
+.location:hover { background-color: #2980b9; }
+

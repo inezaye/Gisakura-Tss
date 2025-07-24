@@ -1,0 +1,66 @@
+.representatives-section {
+  background-color: rgba(3, 9, 45, 0.648);
+  padding: 2rem 1rem;
+  color: whitesmoke;
+  text-align: center;
+  border-radius: 20px;
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.representatives-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.rep-card {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  padding: 1rem;
+  width: 250px;
+  text-align: center;
+  box-shadow: 5PX 10px 15px #dbffff63;
+}
+
+.rep-title {
+  font-size: 1.2rem;
+  margin-bottom: 0.3rem;
+  color: #ffffff;
+}
+
+.rep-name {
+  font-size: 1rem;
+  margin-bottom: 0.2rem;
+}
+
+.rep-phone {
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+  color: #d1f7e7;
+}
+
+.rep-image-wrapper {
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.rep-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .rep-card {
+    width: 90%;
+  }
+}
