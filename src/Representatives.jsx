@@ -21,11 +21,17 @@ const Representatives = () => {
       image: '/images/Gisakura.png',
     },
     {
-      title: 'The Dean of Studies',
+      title: ' Dean of Studies I',
       name: 'UWASENGA Speciose',
       phone: '0788977657',
       image: '/images/Gisakura.png',
     },
+    {
+      title: ' Dean of Studies II',
+      name: 'UMUHIRE Diane',
+      phone: '0788977657',
+      image: '/images/Gisakura.png',
+    }
   ];
 
   return (

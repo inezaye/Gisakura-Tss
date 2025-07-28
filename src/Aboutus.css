@@ -1,15 +1,14 @@
-/* src/components/Aboutus.css 
-#section2 {
-  margin-top: 100px;
-}*/
+/* src/components/Aboutus.css */
 
+/* Section Styling */
 .about-section {
   background: linear-gradient(135deg, #020c31, #081743);
-  padding: 20px 20px;
+  padding: 40px 20px;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 20px;
+  margin-top: 100px;
 }
 
 .about-content {
@@ -20,21 +19,48 @@
 }
 
 .section-title {
-
   font-size: 2.5rem;
-  margin-top: 100px;
-  color: #ffffff;
+  margin-bottom: 20px;
 }
 
-.section2 about-description {
+.about-description {
   font-size: 1.2rem;
   color: #ddd;
-  margin-bottom: 0px;
-
+  margin-bottom: 30px;
+  line-height: 1.6;
 }
 
+/* Mission & Vision Cards */
+.mission-vision {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.mini-card {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 15px;
+  width: 300px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.mini-card h3 {
+  color: #8a2be2;
+  margin-bottom: 10px;
+}
+
+.mini-card p {
+  color: #ddd;
+  font-size: 1rem;
+}
+
+/* Performance Cards */
 .cards-container {
-  display:inline flex;
+  display: flex;
   justify-content: center;
   gap: 20px;
   flex-wrap: wrap;
@@ -45,9 +71,9 @@
   color: #081743;
   border-radius: 25px;
   padding: 25px 20px;
-  max-width: 320px;
+  max-width: 240px; /* 75% of original 320px */
   width: 100%;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
 }
 
@@ -77,22 +103,23 @@
   font-size: 0.95rem;
 }
 
+/* Circle Stats */
 .circle {
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
   background: #f0f8ff;
-  border: 8px solid #052064;
+  border: 6px solid #052064;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 32px;
+  font-size: 26px;
   font-weight: bold;
   margin: 15px auto;
   color: #052064;
 }
 
-/* Responsive Design */
+/* Responsive */
 @media (max-width: 768px) {
   .about-description {
     font-size: 1rem;
@@ -108,8 +135,18 @@
   }
 
   .circle {
-    width: 80px;
-    height: 80px;
-    font-size: 28px;
+    width: 70px;
+    height: 70px;
+    font-size: 24px;
+  }
+
+  .mission-vision {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .mini-card {
+    width: 90%;
+    margin-bottom: 20px;
   }
 }

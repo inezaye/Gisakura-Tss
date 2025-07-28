@@ -1,14 +1,19 @@
+/* Main Section Styling */
 .home-section {
   position: relative;
   width: 100%;
   min-height: 100vh;
   overflow: hidden;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   color: white;
+  padding: 20px;
+
 }
 
+/* Background Images */
 .bg-image {
   position: absolute;
   top: 0;
@@ -27,16 +32,48 @@
   opacity: 1;
 }
 
+/* Overlay Content */
 .school-overlay {
   position: relative;
   z-index: 1;
-  background-color: rgba(3, 17, 74, 0.457);
+  background-color: rgba(3, 17, 74, 0.6);
   padding: 40px 20px;
+  margin-bottom: 20px;
   border-radius: 20px;
   max-width: 800px;
   text-align: center;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+  animation: fadeIn 2s ease-in-out;
 }
 
+.school-overlay h2,
+.school-overlay h3 {
+  color: white;
+  margin: 10px 0;
+}
+
+/* SCHOOL MOTO Styling */
+.school-moto {
+  position: relative;
+  z-index: 1;
+  background-color: rgba(3, 17, 74, 0.6);
+  padding: 30px 20px;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 600px;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+  animation: fadeIn 2s ease-in-out;
+}
+
+.school-moto h2,
+.school-moto h3 {
+  color: white;
+  margin: 8px 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Section Headers */
 .tool {
   margin: 10px 0;
 }
@@ -47,13 +84,42 @@
   margin: 10px auto;
 }
 
-/* Mobile responsiveness */
+/* Responsive Design */
 @media (max-width: 768px) {
   .school-overlay {
-    padding: 20px;
+    padding: 20px 15px;
+  }
+
+  .school-moto {
+    padding: 20px 15px;
+    width: 95%;
   }
 
   .tool hr {
-    width: 40px;
+    width: 30px;
+  }
+
+  .school-moto h2 {
+    font-size: 20px;
+  }
+
+  .school-moto h3 {
+    font-size: 16px;
+  }
+
+  .school-overlay h3 {
+    font-size: 16px;
+  }
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

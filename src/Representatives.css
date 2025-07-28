@@ -21,8 +21,8 @@
 .rep-card {
   background-color: rgba(255, 255, 255, 0.05);
   border-radius: 15px;
-  padding: 1rem;
-  width: 250px;
+  /*padding: 1rem;*/
+  width: 200px;
   text-align: center;
   box-shadow: 5PX 10px 15px #dbffff63;
 }

@@ -1,22 +1,25 @@
-/* index.css */
-
 /* Smooth scroll */
 html {
   scroll-behavior: smooth;
-  background-color:rgba(160, 166, 215, 0.744) ;
- margin-bottom: 0;
+  background-color: rgba(160, 166, 215, 0.744);
+  margin-bottom: 0;
+}/* Add to all sections that are navigated via hash links */
+#section1, #section2, #section3,#section4{
+  scroll-margin-top: 100px; /* match your fixed navbar height */
 }
 
 
 /* Base body styles */
 body {
-  padding-top:2000 ;
-  margin: 0px;
+  padding: 0;
+  margin: 0;
   font-family: sans-serif;
   line-height: 1.6;
 }
 
-/* Header container fixed on top */
+/* ------------------------ */
+/* Fixed Top Logo & Header */
+/* ------------------------ */
 .header {
   position: fixed;
   top: 0;
@@ -26,7 +29,7 @@ body {
   box-shadow: 0 2px 4px rgba(1, 89, 133, 0.671);
 }
 
-/* Logo and app name */
+/* Logo and app name section */
 .logo-and-name {
   display: flex;
   align-items: center;
@@ -39,7 +42,6 @@ body {
 }
 
 .logo {
-  /*background: url('/images/Logo.png') ;*/
   box-shadow: #013252a5 3px;
   width: 150px;
   height: 75px;
@@ -50,11 +52,35 @@ body {
   border-end-end-radius: 25px;
   margin: 0;
   font-size: 1.8rem;
-  color:rgba(3, 45, 111, 0.74) ;
+  color: rgba(3, 45, 111, 0.74);
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-/* Navigation bar */
+/* ------------------------------------- */
+/* NAVBAR with TOGGLE button & dropdown */
+/* ------------------------------------- */
+.navbar-container {
+  width: 100%;
+  background-color: rgba(160, 166, 215, 0.744);
+  box-shadow: 0 2px 4px rgba(1, 89, 133, 0.671);
+  z-index: 999;
+  position: fixed;
+  top: 100px; /* Below the logo */
+}
+
+.navbar-header {
+  display: none; /* hidden by default on large screens */
+  justify-content: flex-end;
+  padding: 10px 20px;
+}
+
+.hamburger {
+  font-size: 26px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: rgba(3, 9, 45, 0.9);
+}
 
 .navbar {
   display: flex;
@@ -62,8 +88,7 @@ body {
   flex-wrap: wrap;
   gap: 10px;
   padding: 10px 15px;
- background-color: rgba(160, 166, 215, 0.744);
-  border-bottom: 1px solid #ddd;
+  transition: all 0.3s ease;
 }
 
 .navbar button {
@@ -73,20 +98,22 @@ body {
   color: rgba(3, 9, 45, 0.9);
   border-radius: 5px;
   cursor: pointer;
+  background-color: white;
   transition: background 0.3s ease;
 }
 
 .navbar button:hover {
-background-color: rgba(3, 9, 45, 0.715);
- color: whitesmoke;
+  background-color: rgba(3, 9, 45, 0.715);
+  color: whitesmoke;
 }
 
-/* Content container with spacing for fixed header */
+/* ---------------------- */
+/* Sections & page layout */
+/* ---------------------- */
 .content {
-  padding-top: 160px; /* Adjust to prevent hidden sections */
+  padding-top: 160px; /* Leave space for fixed header + navbar */
 }
 
-/* Scrollable sections */
 .section {
   padding: 60px 20px;
   border-bottom: 1px solid #ccc;
@@ -94,9 +121,8 @@ background-color: rgba(3, 9, 45, 0.715);
 }
 
 /* -------------------- */
-/* Responsive Settings */
+/* Responsive Settings  */
 /* -------------------- */
-
 @media (max-width: 768px) {
   .logo-and-name {
     flex-direction: column;
@@ -108,13 +134,23 @@ background-color: rgba(3, 9, 45, 0.715);
     font-size: 1.2rem;
   }
 
+  .navbar-header {
+    display: flex;
+  }
+
   .navbar {
     flex-direction: column;
-    gap: 8px;
+    align-items: center;
+    max-height: 0;
+    overflow: hidden;
+  }
+
+  .navbar.open {
+    max-height: 500px;
   }
 
   .navbar button {
-    width: 100%;
+    width: 90%;
     font-size: 1rem;
   }
 
@@ -123,6 +159,6 @@ background-color: rgba(3, 9, 45, 0.715);
   }
 
   .content {
-    padding-top: 190px; /* Extra space for mobile header height */
+    padding-top: 250px;
   }
 }
