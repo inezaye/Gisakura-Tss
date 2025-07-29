@@ -1,51 +1,57 @@
 /* src/components/Aboutus.css */
 
-/* Section Styling */
 .about-section {
   background: linear-gradient(135deg, #020c31, #081743);
-  padding: 40px 20px;
+
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 20px;
-
+  color: #fff;
+  
 }
 
 .about-content {
   max-width: 1200px;
   width: 100%;
   text-align: center;
-  color: #fff;
+  margin-bottom: 20px;
 }
 
 .section-title {
-  font-size: 2.5rem;
-  margin-top: 90px;
+  font-size: 2.8rem;
+  margin-bottom: 0px;
+  display: inline-block;
+  margin-top: 115px;
 }
+
+
 
 .about-description {
   font-size: 1.2rem;
   color: #ddd;
-  margin-bottom: 30px;
+margin-top: 0px;
   line-height: 1.6;
+  margin-bottom: 20px;
+
 }
 
-/* Mission & Vision Cards */
+/* Mission & Vision */
 .mission-vision {
   display: flex;
   justify-content: center;
   gap: 30px;
   flex-wrap: wrap;
-  margin-bottom: 40px;
+  margin-bottom: 50px;
 }
 
 .mini-card {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.08);
   padding: 20px;
   border-radius: 15px;
-  width: 300px;
+  width: 320px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease;
+  text-align: left;
 }
 
 .mini-card h3 {
@@ -56,13 +62,14 @@
 .mini-card p {
   color: #ddd;
   font-size: 1rem;
+  margin-bottom: 8px;
 }
 
-/* Performance Cards */
+/* Cards */
 .cards-container {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 25px;
   flex-wrap: wrap;
 }
 
@@ -71,14 +78,13 @@
   color: #081743;
   border-radius: 25px;
   padding: 25px 20px;
-  max-width: 240px; /* 75% of original 320px */
-  width: 100%;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  width: 250px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
   transition: transform 0.3s ease;
 }
 
 .info-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-6px);
 }
 
 .info-card h3 {
@@ -89,21 +95,23 @@
 .info-card hr {
   width: 50px;
   border: 2px solid #8a2be2;
-  margin: 5px auto;
+  margin: 5px auto 15px;
   border-radius: 2px;
 }
 
 .info-card h5 {
   color: #005f99;
   margin-top: 10px;
+  font-weight: bold;
 }
 
 .info-card p {
   color: #007bb5;
   font-size: 0.95rem;
+  margin-top: 10px;
 }
 
-/* Circle Stats */
+/* Circle */
 .circle {
   width: 80px;
   height: 80px;
@@ -117,6 +125,7 @@
   font-weight: bold;
   margin: 15px auto;
   color: #052064;
+  transition: transform 0.3s;
 }
 
 /* Responsive */
@@ -131,13 +140,7 @@
   }
 
   .info-card {
-    max-width: 90%;
-  }
-
-  .circle {
-    width: 70px;
-    height: 70px;
-    font-size: 24px;
+    width: 90%;
   }
 
   .mission-vision {
@@ -148,5 +151,11 @@
   .mini-card {
     width: 90%;
     margin-bottom: 20px;
+  }
+
+  .circle {
+    width: 70px;
+    height: 70px;
+    font-size: 22px;
   }
 }
