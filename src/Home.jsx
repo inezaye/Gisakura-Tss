@@ -41,9 +41,8 @@ const Home = () => {
 
       <div className="school-moto">
         <h2 className="tool">SCHOOL MOTO<hr /></h2>
-        <h3>. Integrity</h3>
-        <h3>. Hard work</h3>
-        <h3>. Protection and Self-reliance</h3>
+      
+        <h3>🔵Hard work     🔵Hard work     🔵Protection and Self-reliance</h3>
       </div>
     </section>
   );

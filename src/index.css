@@ -1,25 +1,4 @@
-/* Smooth scroll */
-html {
-  scroll-behavior: smooth;
-  background-color: rgba(160, 166, 215, 0.744);
-  margin-bottom: 0;
-}/* Add to all sections that are navigated via hash links */
-#section1, #section2, #section3,#section4{
-  scroll-margin-top: 100px; /* match your fixed navbar height */
-}
-
-
-/* Base body styles */
-body {
-  padding: 0;
-  margin: 0;
-  font-family: sans-serif;
-  line-height: 1.6;
-}
-
-/* ------------------------ */
-/* Fixed Top Logo & Header */
-/* ------------------------ */
+/* Header fixes */
 .header {
   position: fixed;
   top: 0;
@@ -27,18 +6,18 @@ body {
   background: white;
   z-index: 1000;
   box-shadow: 0 2px 4px rgba(1, 89, 133, 0.671);
+  padding-bottom: 10px;
 }
 
-/* Logo and app name section */
+/* Logo and name styling remains same */
 .logo-and-name {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0px;
+  gap: 10px;
   padding: 10px 20px;
-  border-bottom: 1px solid #eee;
-  flex-wrap: wrap;
   background-color: rgb(226, 250, 241);
+  flex-wrap: wrap;
 }
 
 .logo {
@@ -48,50 +27,52 @@ body {
 }
 
 .app-name {
-  border-color: rgb(5, 28, 110);
-  border-end-end-radius: 25px;
   margin: 0;
   font-size: 1.8rem;
   color: rgba(3, 45, 111, 0.74);
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  border-radius: 0 0 25px 0;
 }
 
-/* ------------------------------------- */
-/* NAVBAR with TOGGLE button & dropdown */
-/* ------------------------------------- */
-.navbar-container {
-  width: 100%;
-  background-color: rgba(160, 166, 215, 0.744);
-  box-shadow: 0 2px 4px rgba(1, 89, 133, 0.671);
-  z-index: 999;
-  position: fixed;
-  top: 100px; /* Below the logo */
-}
-
-.navbar-header {
-  display: none; /* hidden by default on large screens */
-  justify-content: flex-end;
-  padding: 10px 20px;
-}
-
-.hamburger {
-  font-size: 26px;
-  background: none;
+/* Nav toggle button */
+.nav-toggle-button {
+  display: block;
+  margin: 10px auto 0 auto;
+  background-color: rgba(3, 9, 45, 0.9);
+  color: white;
+  font-size: 1.1rem;
+  padding: 8px 20px;
   border: none;
+  border-radius: 5px;
   cursor: pointer;
-  color: rgba(3, 9, 45, 0.9);
+  box-shadow: 0 2px 4px rgba(1, 89, 133, 0.5);
+  transition: background-color 0.3s ease;
 }
 
-.navbar {
-  display: flex;
+.nav-toggle-button:hover {
+  background-color: rgba(3, 9, 45, 0.7);
+}
+
+/* Dropdown navbar container */
+.nav-dropdown {
+  display: none;
+  flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
   gap: 10px;
-  padding: 10px 15px;
-  transition: all 0.3s ease;
+  margin-top: 10px;
+  padding: 0 10px 10px 10px;
+  background-color: rgba(160, 166, 215, 0.744);
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(1, 89, 133, 0.5);
 }
 
-.navbar button {
+.nav-dropdown.open {
+  display: flex;
+}
+
+/* Buttons inside dropdown */
+.nav-dropdown button {
   padding: 8px 14px;
   font-size: 1.2rem;
   border: none;
@@ -100,29 +81,15 @@ body {
   cursor: pointer;
   background-color: white;
   transition: background 0.3s ease;
+  min-width: 140px;
 }
 
-.navbar button:hover {
+.nav-dropdown button:hover {
   background-color: rgba(3, 9, 45, 0.715);
   color: whitesmoke;
 }
 
-/* ---------------------- */
-/* Sections & page layout */
-/* ---------------------- */
-.content {
-  padding-top: 160px; /* Leave space for fixed header + navbar */
-}
-
-.section {
-  padding: 60px 20px;
-  border-bottom: 1px solid #ccc;
-  min-height: 100vh;
-}
-
-/* -------------------- */
-/* Responsive Settings  */
-/* -------------------- */
+/* Responsive adjustments */
 @media (max-width: 768px) {
   .logo-and-name {
     flex-direction: column;
@@ -131,34 +98,24 @@ body {
   }
 
   .app-name {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
   }
 
-  .navbar-header {
-    display: flex;
-  }
-
-  .navbar {
+  .nav-dropdown {
     flex-direction: column;
     align-items: center;
-    max-height: 0;
-    overflow: hidden;
+    gap: 8px;
+    max-width: 320px;
+    margin: 10px auto 15px auto;
   }
 
-  .navbar.open {
-    max-height: 500px;
-  }
-
-  .navbar button {
+  .nav-dropdown button {
     width: 90%;
     font-size: 1rem;
   }
+}
 
-  .section {
-    padding: 40px 15px;
-  }
-
-  .content {
-    padding-top: 250px;
-  }
+/* Padding to push content below fixed header + nav */
+.content {
+  padding-top: 160px; /* Adjust as needed */
 }

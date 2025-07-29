@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import LogoAndName from './LogoAndName';
-import Navbar from './Navbar';
 import './index.css';
 import Home from './Home';
 import Aboutus from './Aboutus';
@@ -12,7 +11,7 @@ function App() {
     <>  
       <header className="header">
         <LogoAndName />
-        <Navbar />
+      
       </header>
 
       <main className="content">

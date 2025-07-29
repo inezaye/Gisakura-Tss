@@ -1,12 +1,13 @@
 .footer {
-  margin-top: 40px;
-  padding: 20px;
+  margin-top: 60px;
+  padding: 10px;
 background:  rgba(2, 13, 78, 0.822);
   color: white;
   text-align: center;
   font-size: 0.9rem;
   border-top: 2px solid #444;
-  padding: 5vh  auto;
+ margin-bottom: 0 !important;
+  height:50px ;
 }
 .footer a {
   color: #8a2be2;

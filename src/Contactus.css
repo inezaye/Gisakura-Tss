@@ -3,6 +3,7 @@
   background-color: rgba(3, 9, 45, 0.648);
   text-align: center;
   color: whitesmoke;
+ height:450px;
 }
 
 .contact-container {
@@ -12,8 +13,10 @@
 
 .contact-info p {
   margin: 8px 0;
-  color: whitesmoke;
+  color: #f5f5f5;
   font-size: 1rem;
+  
+
 }
 
 .contact-buttons {
@@ -21,7 +24,7 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 12px;
-  margin-top: 20px;
+  margin-top: 60px;
 }
 
 .contact-btn {

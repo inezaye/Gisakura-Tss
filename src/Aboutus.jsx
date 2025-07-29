@@ -6,7 +6,7 @@ const Aboutus = () => {
   return (
     <section id="section2" className="about-section">
       <div className="about-content">
-        <h2 className="section-title">About Our School</h2>
+        <h2 className="section-title">About Our School<hr/></h2>
         <p className="about-description">
           We are committed to academic excellence and holistic student development.
           We nurture integrity, innovation, and responsibility in every learner.
@@ -15,12 +15,16 @@ const Aboutus = () => {
         <div className="mission-vision">
           <div className="mini-card">
             <h3>Our Mission</h3>
-            <p>To empower students with quality education for a better future.</p>
+            
+            <p>🔵To provide effective and efficient educational skills in a conductive environment and to equip them with enough capacities allowing them to be competitive tothe job market.</p>
+            <p>🔵To promote vocational and technical training in order to provide compentent learners on the labour market.</p>
+            <p>🔵To promote techinical skills .</p>
+            <p>🔵To advance entrepreneurial culcture .</p>
           </div>
 
           <div className="mini-card">
             <h3>Our Vision</h3>
-            <p>To be a center of excellence in knowledge, discipline, and service.</p>
+            <p>🔵GS Gisakura we aspires to become the best provider of quality and inclusive education in our province.</p>
           </div>
         </div>
 

@@ -30,14 +30,14 @@ const Contacts = () => {
           </button>
 
           <button
-            onClick={() => Openlink('mailto:inezayekamanzijimy@gmail.com')}
+            onClick={() => Openlink('mailto:gsgisakura2018@gmail.com')}
             className="contact-btn email"
           >
             <MdEmail /> Email
           </button>
 
           <button
-            onClick={() => Openlink('https://wa.me/250724579762')}
+            onClick={() => Openlink('https://wa.me/250788420328')}
             className="contact-btn whatsapp"
           >
             <FaWhatsapp /> WhatsApp
